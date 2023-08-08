@@ -1,0 +1,65 @@
+
+*,*::before,*::after {
+    box-sizing: border-box;
+    font-family: monospace , sans-serif ; 
+    font-weight: normal;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right ,#fc0352,#c203fc);
+}
+.calculator-grid {
+    display: grid;
+    height: 90vh;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows:minmax(120px,auto) repeat(5,100px);
+}
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255 , .9);
+    border: white 1px solid;
+    outline: none;
+}
+.calculator-grid >button:hover {
+    background-color: rgba(255,255,255,.6);
+}
+.two-span {
+    grid-column: span 2;
+}
+.display{
+    grid-column: 1/-1;
+    background-color: rgba(0, 0, 0, .75);
+    color: white;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.display .previous-operand {
+    color: rgba(255, 255, 255,.75);
+    font-size: 1.5rem;
+}
+.display .current-operand {
+    font-size: 2.5rem;
+}
+
+.disc {
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: rgb(221, 235, 230);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+p {
+    font-size: 15px;
+}
